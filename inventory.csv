@@ -1,0 +1,9 @@
+id,name,category,quantity,unit_price
+P001,Wireless Mouse,Electronics,50,29.90
+P002,USB-C Cable,Electronics,120,9.90
+P003,Notebook A5,Stationery,200,3.50
+P004,Ballpoint Pen,Stationery,500,0.80
+P005,Desk Lamp,Electronics,30,45.00
+P006,Stapler,Stationery,75,12.00
+P007,HDMI Adapter,Electronics,5,22.50
+P008,Sticky Notes,Stationery,300,2.20
