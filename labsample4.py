@@ -40,7 +40,13 @@ def display_all_records(inventory):
 # -------------------------------------------------------
 def get_low_stock_items(inventory, threshold):
     # TODO: Implement this function
-    pass
+    if not inventory:
+        return None
+    low_stock = []
+    for item in inventory:
+        if int(item["quantity"]) < threshold:
+            low_stock.append(item)
+    return low_stock
 
 
 # -------------------------------------------------------
@@ -50,7 +56,15 @@ def get_low_stock_items(inventory, threshold):
 # -------------------------------------------------------
 def get_items_by_category(inventory, category):
     # TODO: Implement this function
-    pass
+    if not inventory:
+        return None
+    
+    category_item = []
+    for item in inventory:
+        if item["category"] == category:
+            category_item.append(item)
+
+    return category_item
 
 
 # -------------------------------------------------------
@@ -60,7 +74,14 @@ def get_items_by_category(inventory, category):
 # -------------------------------------------------------
 def calc_total_stock_value(inventory):
     # TODO: Implement this function
-    pass
+    if not inventory:
+        return None
+    total_value = 0
+    for item in inventory:
+        stock_value = calc_item_value(item)
+        total_value = total_value + stock_value
+
+    return total_value
 
 
 # -------------------------------------------------------
@@ -69,7 +90,19 @@ def calc_total_stock_value(inventory):
 # -------------------------------------------------------
 def get_highest_value_item(inventory):
     # TODO: Implement this function
-    pass
+
+    if not inventory:
+        return None
+    highest_value = None
+    for item in inventory:
+        stock_value = calc_item_value(item)
+        if highest_value is None or stock_value > highest_value: 
+            highest_value = stock_value
+            top_item = item 
+
+    return top_item
+
+        
 
 
 # -------------------------------------------------------
